@@ -6,11 +6,33 @@
 /*   By: jalcausa <jalcausa@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/06 19:49:12 by jalcausa          #+#    #+#             */
-/*   Updated: 2024/10/06 20:06:18 by jalcausa         ###   ########.fr       */
+/*   Updated: 2024/10/08 12:28:35 by jalcausa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+int	ft_filter_format(char c, va_list *args)
+{
+	if (c == 'c')
+		return (ft_putchr(va_arg(*args, int)));
+	else if (c == 's')
+		return (ft_putstr(va_arg(*args, char *)));
+	else if (c == 'p')
+		return (ft_putptr(va_arg(*args, unsigned long long)));
+	else if (c == 'd' || c == 'i')
+		return (ft_putnbr(va_arg(*args, int)));
+	else if (c == 'u')
+		return(ft_putnbr_unsigned(va_arg(*args, unsigned int)));
+	else if (c == 'x' || c == 'X')
+		return (ft_puthex(va_arg(*args, unsigned int), c));
+	else if (c == '%')
+	{
+		write(1, "%", 1);
+		return (1);
+	}
+	return (0);
+}
 
 int	ft_printf(char const *s, ...)
 {
