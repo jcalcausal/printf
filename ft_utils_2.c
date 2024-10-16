@@ -6,14 +6,14 @@
 /*   By: jalcausa <jalcausa@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 10:17:35 by jalcausa          #+#    #+#             */
-/*   Updated: 2024/10/16 10:24:51 by jalcausa         ###   ########.fr       */
+/*   Updated: 2024/10/16 10:30:26 by jalcausa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_count_digits_unsigned(unsigned int n)
 {
 	int	i;
-	
+
 	i = 0;
 	while (n >= 10)
 	{
@@ -39,7 +39,7 @@ int	ft_puthex(unsigned long int n, char c)
 {
 	char	*alphabet;
 	int		res;
-	
+
 	res = 1;
 	if (c == 'x')
 		alphabet = "0123456789abcdef";

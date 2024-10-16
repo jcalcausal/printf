@@ -6,7 +6,7 @@
 /*   By: jalcausa <jalcausa@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 10:02:47 by jalcausa          #+#    #+#             */
-/*   Updated: 2024/10/16 10:19:29 by jalcausa         ###   ########.fr       */
+/*   Updated: 2024/10/16 10:30:13 by jalcausa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,11 @@ int	ft_putchar(char c)
 int	ft_putstr(char *str)
 {
 	int	i;
-	
+
 	i = 0;
 	if (str == NULL)
 		return (ft_putstr("(null)"));
-	while(str[i])
+	while (str[i])
 	{
 		write(1, &str[i], 1);
 		++i;
@@ -51,7 +51,7 @@ int	ft_putptr(unsigned long int n)
 int	ft_count_digits(int n)
 {
 	int	i;
-	
+
 	i = 0;
 	if (n < 0)
 	{
