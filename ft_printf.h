@@ -6,7 +6,7 @@
 /*   By: jalcausa <jalcausa@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/06 19:50:08 by jalcausa          #+#    #+#             */
-/*   Updated: 2024/10/17 11:08:44 by jalcausa         ###   ########.fr       */
+/*   Updated: 2024/10/17 11:13:30 by jalcausa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 # include <unistd.h>
 # include <stdarg.h>
 
+int	ft_printf(char const *s, ...);
+int	ft_filter_format(char c, va_list *args);
 int	ft_putchar(char c);
 int	ft_putstr(char *str);
 int	ft_putptr(unsigned long int n);
