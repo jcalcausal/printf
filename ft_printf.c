@@ -6,7 +6,7 @@
 /*   By: jalcausa <jalcausa@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/06 19:49:12 by jalcausa          #+#    #+#             */
-/*   Updated: 2024/10/17 11:05:23 by jalcausa         ###   ########.fr       */
+/*   Updated: 2024/10/17 11:19:48 by jalcausa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,10 +46,7 @@ int	ft_printf(char const *s, ...)
 	while (s[i])
 	{
 		if (s[i] == '%')
-		{
-			++i;
-			printed += ft_filter_format(s[i], &args);
-		}
+			printed += ft_filter_format(s[++i], &args);
 		else if (s[i])
 			printed += ft_putchar(s[i]);
 		++i;

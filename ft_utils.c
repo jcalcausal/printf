@@ -6,7 +6,7 @@
 /*   By: jalcausa <jalcausa@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 10:02:47 by jalcausa          #+#    #+#             */
-/*   Updated: 2024/10/17 11:10:25 by jalcausa         ###   ########.fr       */
+/*   Updated: 2024/10/17 11:44:05 by jalcausa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int	ft_putptr(unsigned long int n)
 
 	res = 0;
 	if (n == 0)
-		return (ft_putstr("(nil)"));
+		return (ft_putstr("0x0"));
 	else
 	{
 		ft_putstr("0x");
@@ -68,19 +68,28 @@ int	ft_count_digits(int n)
 
 int	ft_putnbr(int n)
 {
+	int	count;
+
+	count = 0;
 	if (n == -2147483648)
+	{
 		write(1, "-2147483648", 11);
+		count = 11;
+	}
 	else if (n < 0)
 	{
 		ft_putchar('-');
-		ft_putnbr(-n);
+		count = ft_putnbr(-n) + 1;
 	}
 	else if (n > 9)
 	{
-		ft_putnbr(n / 10);
-		ft_putnbr(n % 10);
+		count += ft_putnbr(n / 10);
+		count += ft_putnbr(n % 10);
 	}
 	else
+	{
 		ft_putchar(n + '0');
-	return (ft_count_digits(n));
+		++count;
+	}
+	return (count);
 }
