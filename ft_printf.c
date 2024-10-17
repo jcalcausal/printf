@@ -6,7 +6,7 @@
 /*   By: jalcausa <jalcausa@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/06 19:49:12 by jalcausa          #+#    #+#             */
-/*   Updated: 2024/10/16 10:29:41 by jalcausa         ###   ########.fr       */
+/*   Updated: 2024/10/17 11:05:23 by jalcausa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_filter_format(char c, va_list *args)
 {
 	if (c == 'c')
-		return (ft_putchr(va_arg(*args, int)));
+		return (ft_putchar(va_arg(*args, int)));
 	else if (c == 's')
 		return (ft_putstr(va_arg(*args, char *)));
 	else if (c == 'p')
