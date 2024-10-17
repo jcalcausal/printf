@@ -6,7 +6,7 @@
 /*   By: jalcausa <jalcausa@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 10:17:35 by jalcausa          #+#    #+#             */
-/*   Updated: 2024/10/17 11:04:24 by jalcausa         ###   ########.fr       */
+/*   Updated: 2024/10/17 11:09:59 by jalcausa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ int	ft_puthex(unsigned long int n, char c)
 		alphabet = "0123456789ABCDEF";
 	if (n > 15)
 	{
-		res = res + ft_puthexa(n / 16, c);
+		res = res + ft_puthex(n / 16, c);
 		write(1, &alphabet[n % 16], 1);
 	}
 	else

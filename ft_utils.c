@@ -6,7 +6,7 @@
 /*   By: jalcausa <jalcausa@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 10:02:47 by jalcausa          #+#    #+#             */
-/*   Updated: 2024/10/16 10:30:13 by jalcausa         ###   ########.fr       */
+/*   Updated: 2024/10/17 11:10:25 by jalcausa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ int	ft_putptr(unsigned long int n)
 	else
 	{
 		ft_putstr("0x");
-		res = ft_hexa(n, 'x');
+		res = ft_puthex(n, 'x');
 	}
 	return (res + 2);
 }
