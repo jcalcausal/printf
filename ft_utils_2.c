@@ -6,9 +6,11 @@
 /*   By: jalcausa <jalcausa@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 10:17:35 by jalcausa          #+#    #+#             */
-/*   Updated: 2024/10/16 10:30:26 by jalcausa         ###   ########.fr       */
+/*   Updated: 2024/10/17 11:04:24 by jalcausa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "ft_printf.h"
 
 int	ft_count_digits_unsigned(unsigned int n)
 {
