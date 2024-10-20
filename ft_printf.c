@@ -6,7 +6,7 @@
 /*   By: jalcausa <jalcausa@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/06 19:49:12 by jalcausa          #+#    #+#             */
-/*   Updated: 2024/10/17 11:19:48 by jalcausa         ###   ########.fr       */
+/*   Updated: 2024/10/20 16:16:55 by jalcausa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,3 +54,35 @@ int	ft_printf(char const *s, ...)
 	va_end(args);
 	return (printed);
 }
+
+/*
+int   main()
+{
+	void *a;
+
+	a = (void *)42;
+
+    ft_printf("Muestra un caracter = %c\n \
+	Muestra un string = %s\n \
+	Muestra un porcentaje = %%\n \
+	Muestra número decimal = %d\n \
+	Muestra un entero de base 10 = %i\n \
+	Muestra un número decimal sin signo = %u\n \
+	Muestra un número hexadecimal en minuscula = %x\n \
+	Muestra un número hexadecimal en mayúscula = %X\n \
+	Muestra un puntero *void imprimido en hezadecimal = %p\n",
+	'c', "Hola",  -16, 9, -45, 42, 42, a); \
+    
+    printf("Muestra un caracter = %c\n \
+	Muestra un string = %s\n \
+	Muestra un porcentaje = %%\n \
+	Muestra número decimal = %d\n \
+	Muestra un entero de base 10 = %i\n \
+	Muestra un número decimal sin signo = %u\n \
+	Muestra un número hexadecimal en minuscula = %x\n \
+	Muestra un número hexadecimal en mayúscula = %X\n \
+	Muestra un puntero *void imprimido en hezadecimal = %p\n", \
+	'c', "Hola",  -16, 9, -45, 42, 42, a); \
+} 
+
+*/
