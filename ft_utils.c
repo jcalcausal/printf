@@ -6,7 +6,7 @@
 /*   By: jalcausa <jalcausa@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 10:02:47 by jalcausa          #+#    #+#             */
-/*   Updated: 2024/10/17 19:48:41 by jalcausa         ###   ########.fr       */
+/*   Updated: 2024/10/20 15:47:13 by jalcausa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int	ft_putptr(unsigned long int n)
 
 	res = 0;
 	if (n == 0)
-		return (ft_putstr("0x0"));
+		return (ft_putstr("(nil)"));
 	else
 	{
 		ft_putstr("0x");
